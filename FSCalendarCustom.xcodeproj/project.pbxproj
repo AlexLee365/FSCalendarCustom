@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4353B99A22DA601B004BD807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353B99922DA601B004BD807 /* AppDelegate.swift */; };
+		4353B99C22DA601B004BD807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353B99B22DA601B004BD807 /* ViewController.swift */; };
+		4353B99F22DA601B004BD807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4353B99D22DA601B004BD807 /* Main.storyboard */; };
+		4353B9A122DA601C004BD807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4353B9A022DA601C004BD807 /* Assets.xcassets */; };
+		4353B9A422DA601C004BD807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4353B9A222DA601C004BD807 /* LaunchScreen.storyboard */; };
+		4353B9CC22DA6032004BD807 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9AC22DA6032004BD807 /* FSCalendarCollectionView.m */; };
+		4353B9CD22DA6032004BD807 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9AF22DA6032004BD807 /* FSCalendarDelegationProxy.m */; };
+		4353B9CE22DA6032004BD807 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9B122DA6032004BD807 /* FSCalendarDelegationFactory.m */; };
+		4353B9CF22DA6032004BD807 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9B822DA6032004BD807 /* FSCalendarCell.m */; };
+		4353B9D022DA6032004BD807 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9B922DA6032004BD807 /* FSCalendarStickyHeader.m */; };
+		4353B9D122DA6032004BD807 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9BA22DA6032004BD807 /* FSCalendar.m */; };
+		4353B9D222DA6032004BD807 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9BB22DA6032004BD807 /* FSCalendarCollectionViewLayout.m */; };
+		4353B9D322DA6032004BD807 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9BC22DA6032004BD807 /* FSCalendarWeekdayView.m */; };
+		4353B9D422DA6032004BD807 /* FSCalendarSeparatorDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9BF22DA6032004BD807 /* FSCalendarSeparatorDecorationView.m */; };
+		4353B9D522DA6032004BD807 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9C122DA6032004BD807 /* FSCalendarExtensions.m */; };
+		4353B9D622DA6032004BD807 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9C322DA6032004BD807 /* FSCalendarConstants.m */; };
+		4353B9D722DA6032004BD807 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9C422DA6032004BD807 /* FSCalendarCalculator.m */; };
+		4353B9D822DA6032004BD807 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9C522DA6032004BD807 /* FSCalendarHeaderView.m */; };
+		4353B9D922DA6032004BD807 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9C922DA6032004BD807 /* FSCalendarTransitionCoordinator.m */; };
+		4353B9DB22DA6032004BD807 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4353B9CB22DA6032004BD807 /* FSCalendarAppearance.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4353B99622DA601B004BD807 /* FSCalendarCustom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSCalendarCustom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4353B99922DA601B004BD807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4353B99B22DA601B004BD807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4353B99E22DA601B004BD807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4353B9A022DA601C004BD807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4353B9A322DA601C004BD807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4353B9A522DA601C004BD807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4353B9AC22DA6032004BD807 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		4353B9AD22DA6032004BD807 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		4353B9AE22DA6032004BD807 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		4353B9AF22DA6032004BD807 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		4353B9B022DA6032004BD807 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		4353B9B122DA6032004BD807 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		4353B9B222DA6032004BD807 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
+		4353B9B322DA6032004BD807 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		4353B9B422DA6032004BD807 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		4353B9B522DA6032004BD807 /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		4353B9B622DA6032004BD807 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		4353B9B722DA6032004BD807 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		4353B9B822DA6032004BD807 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		4353B9B922DA6032004BD807 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		4353B9BA22DA6032004BD807 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		4353B9BB22DA6032004BD807 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		4353B9BC22DA6032004BD807 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		4353B9BD22DA6032004BD807 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		4353B9BE22DA6032004BD807 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		4353B9BF22DA6032004BD807 /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
+		4353B9C022DA6032004BD807 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		4353B9C122DA6032004BD807 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		4353B9C222DA6032004BD807 /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		4353B9C322DA6032004BD807 /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		4353B9C422DA6032004BD807 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		4353B9C522DA6032004BD807 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		4353B9C622DA6032004BD807 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		4353B9C722DA6032004BD807 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		4353B9C822DA6032004BD807 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		4353B9C922DA6032004BD807 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		4353B9CA22DA6032004BD807 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4353B9CB22DA6032004BD807 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		4353B9DC22DA603A004BD807 /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4353B99322DA601B004BD807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4353B98D22DA601B004BD807 = {
+			isa = PBXGroup;
+			children = (
+				4353B99822DA601B004BD807 /* FSCalendarCustom */,
+				4353B99722DA601B004BD807 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4353B99722DA601B004BD807 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4353B99622DA601B004BD807 /* FSCalendarCustom.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4353B99822DA601B004BD807 /* FSCalendarCustom */ = {
+			isa = PBXGroup;
+			children = (
+				4353B9AB22DA6032004BD807 /* FSCalendar */,
+				4353B99922DA601B004BD807 /* AppDelegate.swift */,
+				4353B99B22DA601B004BD807 /* ViewController.swift */,
+				4353B99D22DA601B004BD807 /* Main.storyboard */,
+				4353B9A022DA601C004BD807 /* Assets.xcassets */,
+				4353B9A222DA601C004BD807 /* LaunchScreen.storyboard */,
+				4353B9A522DA601C004BD807 /* Info.plist */,
+				4353B9DC22DA603A004BD807 /* Objc-Bridge-Header.h */,
+			);
+			path = FSCalendarCustom;
+			sourceTree = "<group>";
+		};
+		4353B9AB22DA6032004BD807 /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				4353B9AC22DA6032004BD807 /* FSCalendarCollectionView.m */,
+				4353B9AD22DA6032004BD807 /* FSCalendarWeekdayView.h */,
+				4353B9AE22DA6032004BD807 /* FSCalendarCollectionViewLayout.h */,
+				4353B9AF22DA6032004BD807 /* FSCalendarDelegationProxy.m */,
+				4353B9B022DA6032004BD807 /* FSCalendarExtensions.h */,
+				4353B9B122DA6032004BD807 /* FSCalendarDelegationFactory.m */,
+				4353B9B222DA6032004BD807 /* FSCalendarSeparatorDecorationView.h */,
+				4353B9B322DA6032004BD807 /* FSCalendarCalculator.h */,
+				4353B9B422DA6032004BD807 /* FSCalendarHeaderView.h */,
+				4353B9B522DA6032004BD807 /* FSCalendarConstants.h */,
+				4353B9B622DA6032004BD807 /* FSCalendarAppearance.h */,
+				4353B9B722DA6032004BD807 /* FSCalendarTransitionCoordinator.h */,
+				4353B9B822DA6032004BD807 /* FSCalendarCell.m */,
+				4353B9B922DA6032004BD807 /* FSCalendarStickyHeader.m */,
+				4353B9BA22DA6032004BD807 /* FSCalendar.m */,
+				4353B9BB22DA6032004BD807 /* FSCalendarCollectionViewLayout.m */,
+				4353B9BC22DA6032004BD807 /* FSCalendarWeekdayView.m */,
+				4353B9BD22DA6032004BD807 /* FSCalendarCollectionView.h */,
+				4353B9BE22DA6032004BD807 /* FSCalendarDynamicHeader.h */,
+				4353B9BF22DA6032004BD807 /* FSCalendarSeparatorDecorationView.m */,
+				4353B9C022DA6032004BD807 /* FSCalendarDelegationFactory.h */,
+				4353B9C122DA6032004BD807 /* FSCalendarExtensions.m */,
+				4353B9C222DA6032004BD807 /* FSCalendarDelegationProxy.h */,
+				4353B9C322DA6032004BD807 /* FSCalendarConstants.m */,
+				4353B9C422DA6032004BD807 /* FSCalendarCalculator.m */,
+				4353B9C522DA6032004BD807 /* FSCalendarHeaderView.m */,
+				4353B9C622DA6032004BD807 /* FSCalendarStickyHeader.h */,
+				4353B9C722DA6032004BD807 /* FSCalendar.h */,
+				4353B9C822DA6032004BD807 /* FSCalendarCell.h */,
+				4353B9C922DA6032004BD807 /* FSCalendarTransitionCoordinator.m */,
+				4353B9CA22DA6032004BD807 /* Info.plist */,
+				4353B9CB22DA6032004BD807 /* FSCalendarAppearance.m */,
+			);
+			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4353B99522DA601B004BD807 /* FSCalendarCustom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4353B9A822DA601C004BD807 /* Build configuration list for PBXNativeTarget "FSCalendarCustom" */;
+			buildPhases = (
+				4353B99222DA601B004BD807 /* Sources */,
+				4353B99322DA601B004BD807 /* Frameworks */,
+				4353B99422DA601B004BD807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSCalendarCustom;
+			productName = FSCalendarCustom;
+			productReference = 4353B99622DA601B004BD807 /* FSCalendarCustom.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4353B98E22DA601B004BD807 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alex Lee";
+				TargetAttributes = {
+					4353B99522DA601B004BD807 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 4353B99122DA601B004BD807 /* Build configuration list for PBXProject "FSCalendarCustom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4353B98D22DA601B004BD807;
+			productRefGroup = 4353B99722DA601B004BD807 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4353B99522DA601B004BD807 /* FSCalendarCustom */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4353B99422DA601B004BD807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4353B9A422DA601C004BD807 /* LaunchScreen.storyboard in Resources */,
+				4353B9A122DA601C004BD807 /* Assets.xcassets in Resources */,
+				4353B99F22DA601B004BD807 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4353B99222DA601B004BD807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4353B9D522DA6032004BD807 /* FSCalendarExtensions.m in Sources */,
+				4353B9D822DA6032004BD807 /* FSCalendarHeaderView.m in Sources */,
+				4353B9D022DA6032004BD807 /* FSCalendarStickyHeader.m in Sources */,
+				4353B9CF22DA6032004BD807 /* FSCalendarCell.m in Sources */,
+				4353B9D422DA6032004BD807 /* FSCalendarSeparatorDecorationView.m in Sources */,
+				4353B9D322DA6032004BD807 /* FSCalendarWeekdayView.m in Sources */,
+				4353B9D622DA6032004BD807 /* FSCalendarConstants.m in Sources */,
+				4353B9D722DA6032004BD807 /* FSCalendarCalculator.m in Sources */,
+				4353B9D122DA6032004BD807 /* FSCalendar.m in Sources */,
+				4353B9D222DA6032004BD807 /* FSCalendarCollectionViewLayout.m in Sources */,
+				4353B9D922DA6032004BD807 /* FSCalendarTransitionCoordinator.m in Sources */,
+				4353B99C22DA601B004BD807 /* ViewController.swift in Sources */,
+				4353B9DB22DA6032004BD807 /* FSCalendarAppearance.m in Sources */,
+				4353B9CC22DA6032004BD807 /* FSCalendarCollectionView.m in Sources */,
+				4353B99A22DA601B004BD807 /* AppDelegate.swift in Sources */,
+				4353B9CE22DA6032004BD807 /* FSCalendarDelegationFactory.m in Sources */,
+				4353B9CD22DA6032004BD807 /* FSCalendarDelegationProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4353B99D22DA601B004BD807 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4353B99E22DA601B004BD807 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4353B9A222DA601C004BD807 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4353B9A322DA601C004BD807 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4353B9A622DA601C004BD807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4353B9A722DA601C004BD807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4353B9A922DA601C004BD807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AVJM299X4;
+				INFOPLIST_FILE = FSCalendarCustom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-0705.FSCalendarCustom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alexlee/Xcode/FSCalendarCustom/FSCalendarCustom/Objc-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4353B9AA22DA601C004BD807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5AVJM299X4;
+				INFOPLIST_FILE = FSCalendarCustom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-0705.FSCalendarCustom";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/alexlee/Xcode/FSCalendarCustom/FSCalendarCustom/Objc-Bridge-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4353B99122DA601B004BD807 /* Build configuration list for PBXProject "FSCalendarCustom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4353B9A622DA601C004BD807 /* Debug */,
+				4353B9A722DA601C004BD807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4353B9A822DA601C004BD807 /* Build configuration list for PBXNativeTarget "FSCalendarCustom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4353B9A922DA601C004BD807 /* Debug */,
+				4353B9AA22DA601C004BD807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4353B98E22DA601B004BD807 /* Project object */;
+}
