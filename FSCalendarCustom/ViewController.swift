@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // MARK: - UI Properties
     let containerView = UIView()
     let topTextLabel = UILabel()
+    let refreshBtn = UIButton()
     var weekdayLabel = UILabel()
     let seperateLineViewTop = UIView()
     let seperateLineViewBottom = UIView()
@@ -30,11 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let oneMonthLater = Calendar.current.date(byAdding: .month, value: 2, to: currentDate)
-        
-        print(currentDate)
-        print(oneMonthLater)
-        
+    
         setCalendar()
         setAutoLayout()
         configureViewsOptions()
@@ -53,8 +50,14 @@ class ViewController: UIViewController {
         containerView.addSubview(topTextLabel)
         topTextLabel.translatesAutoresizingMaskIntoConstraints = false
         topTextLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 15).isActive = true
-        topTextLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-        topTextLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        topTextLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
+        
+        containerView.addSubview(refreshBtn)
+        refreshBtn.translatesAutoresizingMaskIntoConstraints = false
+        refreshBtn.centerYAnchor.constraint(equalTo: topTextLabel.centerYAnchor).isActive = true
+        refreshBtn.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -3).isActive = true
+        refreshBtn.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        refreshBtn.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         let weekDays = ["일", "월", "화", "수", "목", "금", "토"]
         var leadingConst:CGFloat = 20
@@ -112,6 +115,13 @@ class ViewController: UIViewController {
         topTextLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         topTextLabel.textColor = #colorLiteral(red: 0.1990053952, green: 0.1978290677, blue: 0.1999138892, alpha: 0.8544252997)
         
+        refreshBtn.setTitle("지우기", for: .normal)
+        refreshBtn.setTitleColor(UIColor(red:0.09, green:0.51, blue:0.54, alpha:1.0), for: .normal)
+        refreshBtn.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
+        refreshBtn.addTarget(self, action: #selector(refreshBtnDidTap(_:)), for: .touchUpInside)
+        refreshBtn.isEnabled = false
+        refreshBtn.layer.opacity = 0.5
+        
         seperateLineViewTop.backgroundColor = #colorLiteral(red: 0.7327679992, green: 0.7284137607, blue: 0.7361161113, alpha: 0.4171660959)
         seperateLineViewBottom.backgroundColor = #colorLiteral(red: 0.7327679992, green: 0.7284137607, blue: 0.7361161113, alpha: 0.4171660959)
         
@@ -145,14 +155,35 @@ class ViewController: UIViewController {
         calendar.appearance.titlePlaceholderColor = #colorLiteral(red: 0.7327679992, green: 0.7284137607, blue: 0.7361161113, alpha: 0.4171660959)
         calendar.appearance.selectionColor = UIColor(red:0.09, green:0.51, blue:0.54, alpha:1.0)
         
-        
-        
-        //        calendar.appearance.titleColors
-        calendar.swipeToChooseGesture.isEnabled = true
-        
-        
+//        calendar.appearance.todayColor = .clear
+//        calendar.appearance.titleTodayColor = #colorLiteral(red: 0.1990053952, green: 0.1978290677, blue: 0.1999138892, alpha: 0.8544252997)
+       
+//        calendar.swipeToChooseGesture.isEnabled = true
+
         view.addSubview(calendar)
         self.calendar = calendar
+    }
+    
+    @objc func refreshBtnDidTap(_ sender: UIButton) {
+        print("didTap")
+        topTextLabel.text = "날짜 선택"
+        selectDatesArray.forEach{
+            calendar.deselect($0)
+        }
+        selectDatesArray.removeAll()
+        sender.isEnabled = false
+        sender.layer.opacity = 0.5
+    }
+    
+    private func todayDate() ->  Date {
+        var components = Calendar.current.dateComponents([.year, .day, .month, .hour, .minute], from: Date())
+        //        components.day = components.day! - 1
+        components.hour = 00
+        components.minute = 00
+        components.second = 00
+        let testDate = Calendar.current.date(from: components)!
+        print("🔵🔵🔵 todayDate: ", testDate)
+        return testDate
     }
     
     private func lastDayOfMonth(date: Date) -> Date {
@@ -164,6 +195,15 @@ class ViewController: UIViewController {
     }
     
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("--------------------------[viewDidLaoutSubviews]--------------------------")
+       
+    }
+    
+    
+    
 }
 
 extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
@@ -171,10 +211,9 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
         print("--------------------------[ShouldSelect]--------------------------")
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
         let selectDateString = dateFormatter.string(from: date)
-        print("monthPosition: ", monthPosition)
-        print("selectDate: ", selectDateString)
+        print("selectDateString: ", selectDateString)
         
-        //        calendar.cell(for: date, at: monthPosition)?
+        
         
         dateFormatter.dateFormat = "MM.dd"
         let currentDay = dateFormatter.string(from: currentDate)
@@ -182,17 +221,10 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
         print("currentDay: ", currentDay)
         print("selectDay: ", selectDay)
         
-        // =================================== ===================================
-        
-//        let cell = calendar.cell(for: date.addingTimeInterval(3600 * 24), at: FSCalendarMonthPosition.current)
-//        let nextDay = calendar.date(for: cell!)
-//        let nextDayString = dateFormatter.string(from: nextDay!)
-        //        print("** Calendar Cell: ", nextDayString)
-
       
         
         if currentDay == selectDay {
-            return false
+//            return false
         }
         
         
@@ -205,23 +237,21 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
     
     func maximumDate(for calendar: FSCalendar) -> Date {
         let laterDate = Calendar.current.date(byAdding: .month, value: 2, to: currentDate)!
-        //        return currentDate.addingTimeInterval(3600 * 24 * 30)
         let lastDayMonth = lastDayOfMonth(date: laterDate)
+        
         return lastDayMonth
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print("--------------------------[DidSelect]--------------------------")
-        let nextDay2 = Calendar.current.date(byAdding: .day, value: 1, to: date)!
-        let nextDayString2 = dateFormatter.string(from: nextDay2)
-        print("** nextDay: ", nextDayString2)
+        refreshBtn.isEnabled = true
+        refreshBtn.layer.opacity = 1
         
-//        let nextDayCell = calendar.cell(for: nextDay2, at: monthPosition)
-//        calendar.select(nextDay2)
         switch selectDatesArray.count {
         case 0:
             print("currentCount: ", selectDatesArray.count)
             selectDatesArray.append(date)
+            topTextLabel.text = setTextFromDate()
             print(selectDatesArray)
         case 1:
             // 이미 1개가 선택되어있을때
@@ -238,8 +268,10 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
                 selectDatesArray.append(day!)
                 calendar.select(day)
             }
+            
             selectDatesArray.removeLast()
             selectDatesArray.sort()
+            topTextLabel.text = setTextFromDate()
             print(selectDatesArray)
         case 2...:
             // 눌렀을때 이미 2개이상이 선택되있는 상황일때
@@ -249,12 +281,10 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
             }
             selectDatesArray.removeAll()
             selectDatesArray.append(date)
+            topTextLabel.text = setTextFromDate()
             print(selectDatesArray)
         default : break
         }
-        
-        
-        
     }
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -266,15 +296,22 @@ extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
             selectDatesArray.removeAll()
             calendar.select(date)
             selectDatesArray.append(date)
+            topTextLabel.text = setTextFromDate()
         }
         print(selectDatesArray)
-        
     }
+    
+    private func setTextFromDate() -> String{
+        var dayString = ""
 
-    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
-        print("--------------------------[PageDidChange]--------------------------")
+        let componentsStartDay = Calendar.current.dateComponents([.month, .day], from: selectDatesArray.first!)
+        
+        if selectDatesArray.count > 1 {
+            let componentsEndDay = Calendar.current.dateComponents([.month, .day], from: selectDatesArray.last!)
+            dayString = "\(componentsStartDay.month!)월 \(componentsStartDay.day!)일 ~ \(componentsEndDay.month!)월 \(componentsEndDay.day!)일"
+            return dayString
+        }
+        dayString = "\(componentsStartDay.month!)월 \(componentsStartDay.day!)일"
+        return dayString
     }
-    
-    
-    
 }
